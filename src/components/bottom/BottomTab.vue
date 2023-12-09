@@ -17,7 +17,7 @@
                 <div class="van-tabbar-item__icon">
                     <Icon  icon="fluent:music-note-2-20-regular" class="iconify iconify--ri"/>
                 </div>
-                <router-link :to="{path:'/my',query:{id:auth.account.id}}">我的</router-link>
+                <router-link to="/my" class="van-tabbar-item__text">我的</router-link>
             </div>
             <div class="van-tabbar-item">
                 <div class="van-tabbar-item__icon">

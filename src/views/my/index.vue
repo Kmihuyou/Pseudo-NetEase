@@ -276,7 +276,9 @@
 // import Head from "./my/Itsmine/head.vue";
 // import Information from "./my/Itsmine/Information.vue";
 import { UserData } from "@/service";//接口
+import { mapState } from "vuex";
 export default {
+  computed:{...mapState(["auth"])},
   components: {
     // Head,
     // Information,
@@ -289,7 +291,7 @@ export default {
    async created() {
         // console.log(this.$route.query.id);
         // UserDetails
-    const [err, res] = await UserData({uid:this.$route.query.id});
+    const [err, res] = await UserData({uid:this.auth.account.id});
     if (!err) this.resources = res.data
     console.log(this.resources);
     // console.log(this.resource);
