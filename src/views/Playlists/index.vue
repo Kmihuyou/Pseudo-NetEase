@@ -40,9 +40,6 @@ export default {
         this.arr.map(({id})=>{id})
         console.log(this.arr);
    },
-   created(){
-    
-   }
     
 }
 </script>
